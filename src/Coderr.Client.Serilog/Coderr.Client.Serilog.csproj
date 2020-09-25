@@ -1,0 +1,39 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>netstandard2.0;net461</TargetFrameworks>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\Coderr.Client.Serilog.xml</DocumentationFile>
+
+    <PackageReleaseNotes>First release.</PackageReleaseNotes>
+    <Version>1.0</Version>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <PackageId>Coderr.Client.Serilog</PackageId>
+    <Authors>1TCompany AB</Authors>
+    <Description>Reports exceptions that are logged with Serilog to Coderr and adds the ability to attach serilog entries to all reported errors.</Description>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <Copyright>Copyright 2020 © 1TCompany AB. All rights reserved.</Copyright>
+    <PackageTags>logger exceptions analysis .net-core NetStandard</PackageTags>
+    <RepositoryUrl>https://github.com/coderrio/coderr.client</RepositoryUrl>
+    <PackageIcon>NugetIcon.png</PackageIcon>
+    <RepositoryType>git</RepositoryType>
+    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+    <PackageProjectUrl>https://coderr.io</PackageProjectUrl>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="README.md">
+      <Pack>true</Pack>
+      <PackagePath>README.md</PackagePath>
+    </Content>
+    <None Include="NugetIcon.png" Pack="true" PackagePath="" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Coderr.Client" Version="2.0.1" />
+    <PackageReference Include="Serilog" Version="2.10.0" />
+  </ItemGroup>
+
+</Project>
