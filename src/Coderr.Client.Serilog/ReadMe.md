@@ -4,7 +4,7 @@
 This library does two things:
 
 1. All logged exceptions are reported to Coderr for further analysis
-2. Log entries from Serilog are cached so that the latest entries can be included with the reported exceptions.
+2. Log entries from Serilog are cached so that the latest entries can be included with reported exceptions.
 
 ## Getting started
 
