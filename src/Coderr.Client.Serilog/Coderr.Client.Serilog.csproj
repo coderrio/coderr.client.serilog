@@ -5,8 +5,8 @@
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\Coderr.Client.Serilog.xml</DocumentationFile>
 
-    <PackageReleaseNotes>First release.</PackageReleaseNotes>
-    <Version>1.0</Version>
+    <PackageReleaseNotes>Corrected nuget icon.</PackageReleaseNotes>
+    <Version>1.0.01</Version>
   </PropertyGroup>
 
   <PropertyGroup>
@@ -28,7 +28,7 @@
       <Pack>true</Pack>
       <PackagePath>README.md</PackagePath>
     </Content>
-    <None Include="NugetIcon.png" Pack="true" PackagePath="" />
+    <None Include="NugetIcon.png" Pack="true" PackagePath="NugetIcon.png" />
   </ItemGroup>
 
   <ItemGroup>
