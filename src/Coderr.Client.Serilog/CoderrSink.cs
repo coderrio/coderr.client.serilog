@@ -1,6 +1,8 @@
 ﻿using System;
+using Coderr.Client.ContextCollections;
 using Coderr.Client.Contracts;
 using Coderr.Client.NLog.ContextProviders;
+using Coderr.Client.Reporters;
 using Serilog.Core;
 using Serilog.Events;
 
@@ -35,14 +37,26 @@ namespace Coderr.Client.Serilog
                 message)
             {
                 Exception = logEvent.Exception?.ToString(),
-
             };
             LogsProvider.Instance.Add(entry);
 
-            if (logEvent.Exception != null)
+            if (logEvent.Exception == null)
             {
-                Err.Report(logEvent.Exception, entry);
+                return;
             }
+
+            IErrorReporterContext context = new ErrorReporterContext(this, logEvent.Exception);
+            var dataCollection = new {
+                LogLevel = logEvent.Level,
+                Message = message,
+                logEvent.Properties
+            }.ToContextCollection("LogEntry");
+            context.ContextCollections.Add(dataCollection);
+
+            var coderrCollection = context.ContextCollections.GetCoderrCollection();
+            coderrCollection.Properties[CoderrCollectionProperties.HighlightCollection] = "LogEntry";
+
+            Err.Report(context);
         }
 
         private int ConvertLevel(LogEventLevel logEventLevel)

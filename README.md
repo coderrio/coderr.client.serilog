@@ -8,15 +8,16 @@ This library does two things:
 
 ## Getting started
 
-Configure Coderr with the application key and shared secret from your Coderr server.
-Then activate the logger:
+First, follow [this guide](https://coderr.io/documentation/getting-started/).
+
+Then activate this library:
 
 ```csharp
 class Program
 {
     static void Main(string[] args)
     {
-        var url = new Uri("https://yourCoderrServer");
+        var url = new Uri("https://report.coderr.io/");
         Err.Configuration.Credentials(url,
             "yourAppKey",
             "yourSharedSecret");

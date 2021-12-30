@@ -4,7 +4,7 @@
 This library does two things:
 
 1. All logged exceptions are reported to Coderr for further analysis
-2. Log entries from Serilog are cached so that the latest entries can be included with reported exceptions.
+2. The 100 latest log entries are automatically added to all reported errors.
 
 ## Getting started
 
@@ -34,3 +34,5 @@ class Program
     }
 }
 ```
+
+https://coderr.io/documentation/getting-started

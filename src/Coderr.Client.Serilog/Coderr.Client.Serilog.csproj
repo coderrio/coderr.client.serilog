@@ -5,8 +5,8 @@
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\Coderr.Client.Serilog.xml</DocumentationFile>
 
-    <PackageReleaseNotes>Corrected nuget icon.</PackageReleaseNotes>
-    <Version>1.0.01</Version>
+    <PackageReleaseNotes>Bumped versions.</PackageReleaseNotes>
+    <Version>1.0.2</Version>
   </PropertyGroup>
 
   <PropertyGroup>
@@ -32,7 +32,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Coderr.Client" Version="2.0.1" />
+    <PackageReference Include="Coderr.Client" Version="2.0.5" />
     <PackageReference Include="Serilog" Version="2.10.0" />
   </ItemGroup>
 

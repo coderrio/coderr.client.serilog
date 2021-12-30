@@ -8,10 +8,10 @@ namespace Coderr.Client.Serilog.Demo
     {
         static void Main()
         {
-            var url = new Uri("http://localhost:60473/");
+            var url = new Uri("https://localhost:44393/");
             Err.Configuration.Credentials(url,
-                "1a68bc3e123c48a3887877561b0982e2",
-                "bd73436e965c4f3bb0578f57c21fde69");
+                "5a617e0773b94284bef33940e4bc8384",
+                "3fab63fb846c4dd289f67b0b3340fefc");
 
 
             Log.Logger = new LoggerConfiguration()
@@ -20,7 +20,15 @@ namespace Coderr.Client.Serilog.Demo
                 .CreateLogger();
 
             Log.Logger.Write(LogEventLevel.Information, "Hello World!");
-            Log.Logger.Write(LogEventLevel.Error, new Exception("My world"), "Hello World!");
+            try
+            {
+                throw new Exception("My world");
+            }
+            catch (Exception ex)
+            {
+                Log.Logger.Write(LogEventLevel.Error, ex, "Hello World!");
+            }
+            
         }
     }
 }
