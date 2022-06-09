@@ -1,6 +1,6 @@
 ﻿using System;
 using Coderr.Client.Config;
-using Coderr.Client.NLog.ContextProviders;
+using Coderr.Client.Serilog.ContextProviders;
 using Serilog;
 using Serilog.Configuration;
 

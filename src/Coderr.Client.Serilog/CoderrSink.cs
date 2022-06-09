@@ -1,8 +1,8 @@
 ﻿using System;
 using Coderr.Client.ContextCollections;
 using Coderr.Client.Contracts;
-using Coderr.Client.NLog.ContextProviders;
 using Coderr.Client.Reporters;
+using Coderr.Client.Serilog.ContextProviders;
 using Serilog.Core;
 using Serilog.Events;
 

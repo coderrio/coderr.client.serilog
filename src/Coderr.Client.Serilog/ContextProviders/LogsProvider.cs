@@ -5,7 +5,7 @@ using Coderr.Client.ContextCollections;
 using Coderr.Client.Contracts;
 using Coderr.Client.Reporters;
 
-namespace Coderr.Client.NLog.ContextProviders
+namespace Coderr.Client.Serilog.ContextProviders
 {
     /// <summary>
     ///     This provider do not add an collection but attaches the 50 latest log entries to each report.
